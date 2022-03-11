@@ -12,22 +12,15 @@ namespace Variables
         {
             string login = "qwerty";
             string password = "login";
-            
-            ShowInfo(login, password);
-            InverseData(ref login, ref password);
-            ShowInfo(login, password);
-        }
 
-        static void ShowInfo(string login, string password)
-        {
             Console.WriteLine($"login: {login}\npassword: {password}");
-        }
 
-        static void InverseData(ref string login, ref string password)
-        {
             string template = login;
             login = password;
             password = template;
+
+            Console.WriteLine($"/nДанные после инверсии");
+            Console.WriteLine($"login: {login}\npassword: {password}");
         }
     }
 }
